@@ -12,6 +12,7 @@ BuildRequires:  qt4-devel
 URL:            http://www.pwsafe.de/
 Source0:        http://www.pwsafe.de/releases/unstable/pws-%{version}.tar.gz
 Patch0:         pws-0.1.3_destdir.patch
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 pws aims to be a fully compatible passwordsafe implementation.
