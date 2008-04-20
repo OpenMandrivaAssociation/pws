@@ -3,7 +3,7 @@
 
 Name:           pws
 Version:        0.3.0
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Fully compatible passwordsafe implementation
 License:        GPL
 Group:          Text tools
@@ -45,6 +45,7 @@ The development files for the PWS library.
 %patch0 -p1
 
 %build
+export CFLAGS="-fPIC %{optflags}"
 %{configure2_5x} --with-qt=%{qt4dir}
 %{make}
 
