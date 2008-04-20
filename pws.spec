@@ -1,21 +1,19 @@
 %define libname      %{mklibname pws 0.1}
 %define libnamedevel %{mklibname pws -d}
 
-%define beta         rc1
-
 Name:           pws
-Version:        0.2.0
-Release:        %mkrel 0.%{beta}.1
+Version:        0.3.0
+Release:        %mkrel 1
 Summary:        Fully compatible passwordsafe implementation
 License:        GPL
 Group:          Text tools
 BuildRequires:  libgcrypt-devel
 BuildRequires:  qt4-devel
 URL:            http://www.pwsafe.de/
-Source0:        http://www.pwsafe.de/releases/unstable/pws-%{version}%{beta}.tar.gz
+Source0:        http://www.pwsafe.de/releases/unstable/pws-%{version}.tar.gz
 Source1:        pws.desktop
 Source2:        pws-x-psafe3.desktop
-Patch0:         pws-0.1.3_destdir.patch
+Patch0:         pws-0.3.0-destdir.patch
 Requires(post):  desktop-file-utils
 Requires(postun):  desktop-file-utils
 BuildRequires:  desktop-file-utils
@@ -43,8 +41,8 @@ Group:          Development/C
 The development files for the PWS library.
 
 %prep
-%setup -q -n pws-%{version}%{beta}
-%patch0 -p0
+%setup -q
+%patch0 -p1
 
 %build
 %{configure2_5x} --with-qt=%{qt4dir}
