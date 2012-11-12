@@ -1,0 +1,23 @@
+--- pws-0.3.0/Makefile.in.orig	2008-02-24 20:14:19.000000000 +0100
++++ pws-0.3.0/Makefile.in	2008-04-20 23:44:49.000000000 +0200
+@@ -1,8 +1,8 @@
+ prefix      =   @prefix@
+ exec_prefix =   @exec_prefix@
+-BINDIR		=	@bindir@
+-LIBDIR		=	@libdir@
+-INCLUDEDIR	=	@includedir@
++BINDIR		=	$(DESTDIR)@bindir@
++LIBDIR		=	$(DESTDIR)@libdir@
++INCLUDEDIR	=	$(DESTDIR)@includedir@
+ INSTALL	=	@INSTALL@ 
+ QMAKE	=	@QMAKE@ 
+ 
+@@ -27,8 +27,6 @@
+ 	(cd pws && make)
+ 
+ install: all
+-	strip libpws/libpws.so.0.1.2
+-	strip pws/pws
+ 	$(INSTALL) -d $(LIBDIR)
+ 	$(INSTALL) -d $(BINDIR)
+ 	$(INSTALL) -d $(INCLUDEDIR)/libpws
