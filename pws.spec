@@ -109,3 +109,38 @@ export CFLAGS="-fPIC %{optflags}"
 %files -n %{libnamedevel}
 %defattr(0644,root,root,0755)
 %{_includedir}/libpws
+
+
+%changelog
+* Fri Sep 04 2009 Thierry Vignaud <tvignaud@mandriva.com> 0.3.0-4mdv2010.0
++ Revision: 430817
+- rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.3.0-3mdv2009.0
++ Revision: 269015
+- rebuild early 2009.0 package (before pixel changes)
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Mon Apr 21 2008 David Walluck <walluck@mandriva.org> 0.3.0-2mdv2009.0
++ Revision: 196051
+- fix build on x86_64
+- 0.3.0
+
+* Wed Jan 02 2008 David Walluck <walluck@mandriva.org> 0.2.0-0.rc1.1mdv2008.1
++ Revision: 140695
+- add desktop files
+- 0.2.0rc1
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sat Nov 24 2007 David Walluck <walluck@mandriva.org> 0.1.4-1mdv2008.1
++ Revision: 111807
+- import pws
+
+

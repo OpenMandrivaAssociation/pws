@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=pws
+GenericName=Fully compatible passwordsafe implementation
+Exec=pws
+Icon=pws
+Terminal=false
+Type=Application
+MimeType=application/x-psafe3;
+Categories=System;Security;
