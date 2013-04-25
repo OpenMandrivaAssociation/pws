@@ -3,7 +3,7 @@
 
 Name:           pws
 Version:        0.3.0
-Release:        %mkrel 4
+Release:        5
 Summary:        Fully compatible passwordsafe implementation
 License:        GPL
 Group:          Text tools
@@ -18,7 +18,6 @@ Requires(post):  desktop-file-utils
 Requires(postun):  desktop-file-utils
 BuildRequires:  desktop-file-utils
 BuildRequires:  imagemagick
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 pws aims to be a fully compatible passwordsafe implementation.
@@ -50,7 +49,6 @@ export CFLAGS="-fPIC %{optflags}"
 %{make}
 
 %install
-%{__rm} -rf %{buildroot}
 %{makeinstall_std}
 
 %{__mkdir_p} %{buildroot}%{_datadir}/pixmaps
@@ -69,27 +67,6 @@ export CFLAGS="-fPIC %{optflags}"
         %{SOURCE1}
 
 %{__install} -D -m 644 -p %{SOURCE2} %{buildroot}%{_datadir}/mimelnk/application/x-psafe3.desktop
-
-%clean
-%{__rm} -rf %{buildroot}
-
-%post
-%{update_desktop_database}
-%update_icon_cache hicolor
-%{update_mime_database}
-
-%postun
-%{clean_desktop_database}
-%clean_icon_cache hicolor
-%{clean_mime_database}
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
 
 %files
 %defattr(0644,root,root,0755)
