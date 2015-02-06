@@ -3,7 +3,7 @@
 
 Name:           pws
 Version:        0.3.0
-Release:        5
+Release:        6
 Summary:        Fully compatible passwordsafe implementation
 License:        GPL
 Group:          Text tools
