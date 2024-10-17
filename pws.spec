@@ -9,7 +9,7 @@ License:        GPL
 Group:          Text tools
 BuildRequires:  libgcrypt-devel
 BuildRequires:  qt4-devel
-URL:            http://www.pwsafe.de/
+URL:            https://www.pwsafe.de/
 Source0:        http://www.pwsafe.de/releases/unstable/pws-%{version}.tar.gz
 Source1:        pws.desktop
 Source2:        pws-x-psafe3.desktop
