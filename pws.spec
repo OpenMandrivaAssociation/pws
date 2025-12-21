@@ -7,6 +7,7 @@ Release:        6
 Summary:        Fully compatible passwordsafe implementation
 License:        GPL
 Group:          Text tools
+BuildRequires:	make
 BuildRequires:  libgcrypt-devel
 BuildRequires:  qt4-devel
 URL:            https://www.pwsafe.de/
